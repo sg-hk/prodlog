@@ -6,11 +6,13 @@ from subprocess import run
 from datetime import datetime
 from prodlog import log_pomodoro
 
-# ADD ANKI OPTION USING DISPATCHER
-# ADD WOFI OR LOCK OPTION FOR PAUSE, USING DISPATCHER 
+# TO ADD
+# Argument -a (Anki) to launch Anki every time a pomodoro starts
+# Argument -l (Lock) to lock the computer between breaks (but how to unlock w/out password? maybe create specific hyprlock config)
+# Argument -w (Wofi) to launch the wofi app launcher when a break starts
+# Print minutes left in terminal dynamically (update the same line, dont print new statement every minute)
 
 def notify(color, text):
-    # Use double quotes around the entire command and single quotes around the color and text
     run(['hyprctl', 'notify', '-1', '5000', f'{color}', f'fontsize:20 {text}']) 
 
 def pomodoro_timer(pomodoro_time, break_time, long_break_time, cycles, category, frequency):
