@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+from timer import notify
 
 log_file_path = '/usr/share/prodlog/log.json'
 
@@ -38,7 +39,7 @@ def query_log(category, date_str):
                         total_time += entry[category].get('length', 0)
     
     if total_time == 0:
-        notify("Category not found", f"No entries found for category '{category}' on date '{date_str}'.")
+        notify("No entries found for category '{category}' on date '{date_str}'.") # this needs to be updated to work with the notify function
     
     return total_time
 
