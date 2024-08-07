@@ -1,1 +1,1 @@
-This is a (tatsumato)[https://aur.archlinux.org/packages/tatsumato] inspired timeboxing productivity tool. Note that it assumes a Unix architecture (/usr/bin, /usr/share folders) and Hyprland as compositor (hyprctl is the notification dispatcher). MPV is another dependency.
+This is a [tatsumato](https://aur.archlinux.org/packages/tatsumato) inspired timeboxing productivity tool. Note that it assumes a Unix architecture (/usr/bin, /usr/share folders) and Hyprland as compositor (hyprctl is the notification dispatcher). MPV is another dependency.
