@@ -1,10 +1,10 @@
 import json
 from datetime import datetime
-from timer import notify
 
 log_file_path = '/usr/share/prodlog/log.json'
 
 # Update JSON log with new entry
+# This will eventually be changed to a sqlite database
 def log_pomodoro(pomodoro_time, category, date):
     
     # Initialize log as an empty list if the file doesn't exist
@@ -39,10 +39,9 @@ def query_log(category, date_str):
                         total_time += entry[category].get('length', 0)
     
     if total_time == 0:
-        notify("No entries found for category '{category}' on date '{date_str}'.") # this needs to be updated to work with the notify function
+        notify("Category not found", f"No entries found for category '{category}' on date '{date_str}'.")
     
     return total_time
 
 if __name__ == '__main__':
     main()
-
